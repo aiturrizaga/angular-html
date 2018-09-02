@@ -1,8 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 //Rutas
 import { AppRoutingModule } from './app-routing.module';
+
+//Servicios
+import { InfoPaginaService } from './services/info-pagina.service';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/header/header.component';
@@ -23,9 +27,12 @@ import { ItemComponent } from './pages/item/item.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    InfoPaginaService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
