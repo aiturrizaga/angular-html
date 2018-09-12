@@ -17,7 +17,9 @@ export class ProductosService {
             .subscribe((resp: Producto[]) => {
                 console.log(resp);
                 this.productos = resp;
+                // setTimeout(() => {
                 this.cargando = false;
+                // }, 1000);
             });
     }
 
