@@ -23,4 +23,8 @@ export class ProductosService {
             });
     }
 
+    getProducto(id: String) {
+        return this.http.get(`https://angular-html-cb8b9.firebaseio.com/productos/${id}.json`)
+    }
+
 }
