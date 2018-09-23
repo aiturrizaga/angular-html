@@ -29,11 +29,11 @@ export class ProductosService {
 
     }
 
-    getProducto(id: String) {
+    getProducto(id: string) {
         return this.http.get(`https://angular-html-cb8b9.firebaseio.com/productos/${id}.json`)
     }
 
-    buscarProducto(termino: String) {
+    buscarProducto(termino: string) {
 
         if (this.productos.length === 0) {
             //Cargar los productos
